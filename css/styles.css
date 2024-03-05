@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Crow';
+    src: url('../assets/font/crow.ttf') format('truetype'); /* Reemplaza 'ruta/a/crow.ttf' con la ruta correcta del archivo de la fuente */
+  }
+
+:root {
+    --marronMenu: rgba(151, 11, 11, 0.404); /* Puedes cambiar #ff0000 por el color hexadecimal, RGB, HSL, etc. que desees */
+}
+
+body {
+    /* Establece la imagen de fondo */
+    background-image: url('../assets/img/bg.png');
+    /* Ajusta la imagen para que cubra toda la pantalla y no se repita */
+    background-size: cover;
+    /* Centra la imagen en la pantalla */
+    background-position: center;
+    /* Fija la imagen para que no se desplace con el contenido de la página */
+    background-attachment: fixed;
+    /* Establece un color de fondo de respaldo para casos en que la imagen no se cargue */
+    background-color: #0080ff;
+  }
+
+.navbar{
+    background-color: var(--marronMenu);
+    margin-bottom: 10px;
+}
+  
+/* Aplica la fuente personalizada al título del menú de navegación */
+.navbar-brand {
+font-family: 'Crow', sans-serif; /* Usa la fuente 'Crow' como la primera opción y luego otras fuentes genéricas */
+/* Otros estilos opcionales */
+/* Puedes agregar más estilos según tus preferencias */
+}
+
+.main{
+    margin: auto;
+    width: 85%;
+    border-radius: 5px;
+    background-color: rgba(106, 106, 106, 0.91);
+}
+
+.apartado {
+    background-color: #474747;
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: aliceblue;
+  }
+  
+
+
+/* Estilos para el carrusel */
+#carouselExampleControls {
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Establecer un tamaño máximo para las imágenes del carrusel */
+.carousel-item img {
+    margin:auto;
+    max-width: 80%; /* Ancho máximo */
+    max-height: auto; /* Altura máxima */
+}
+
+.imgReinos{
+    max-width: 150px;
+    height: auto;
+}
+
+footer{
+    background-color:  var(--marronMenu);
+}
+
+
+/* Media Query para dispositivos más pequeños */
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        font-size: 30px; /* Tamaño de fuente más grande para dispositivos más pequeños */
+    }
+
+    .main{
+        width: 95%;
+    }
+}
