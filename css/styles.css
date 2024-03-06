@@ -3,8 +3,13 @@
     src: url('../assets/font/crow.ttf') format('truetype'); /* Reemplaza 'ruta/a/crow.ttf' con la ruta correcta del archivo de la fuente */
   }
 
+@font-face {
+    font-family: 'Sunder';
+    src: url('../assets/font/sunder.ttf') format('truetype'); /* Reemplaza 'ruta/a/crow.ttf' con la ruta correcta del archivo de la fuente */
+}
+
 :root {
-    --marronMenu: rgba(151, 11, 11, 0.404); /* Puedes cambiar #ff0000 por el color hexadecimal, RGB, HSL, etc. que desees */
+    --marronMenu: #373737; /* Puedes cambiar #ff0000 por el color hexadecimal, RGB, HSL, etc. que desees */
 }
 
 body {
@@ -27,9 +32,10 @@ body {
   
 /* Aplica la fuente personalizada al título del menú de navegación */
 .navbar-brand {
-font-family: 'Crow', sans-serif; /* Usa la fuente 'Crow' como la primera opción y luego otras fuentes genéricas */
-/* Otros estilos opcionales */
-/* Puedes agregar más estilos según tus preferencias */
+    font-family: 'Sunder', sans-serif; /* Usa la fuente 'Crow' como la primera opción y luego otras fuentes genéricas */
+    font-size: 35px;
+    /* Otros estilos opcionales */
+    /* Puedes agregar más estilos según tus preferencias */
 }
 
 .main{
@@ -41,12 +47,18 @@ font-family: 'Crow', sans-serif; /* Usa la fuente 'Crow' como la primera opción
 
 .apartado {
     background-color: #474747;
+    height: auto;
     padding: 40px;
     margin-bottom: 20px;
     border-radius: 10px;
     color: aliceblue;
   }
   
+.apartado img{
+    width:95%;
+    height: 95%;
+
+}
 
 
 /* Estilos para el carrusel */
@@ -57,6 +69,7 @@ font-family: 'Crow', sans-serif; /* Usa la fuente 'Crow' como la primera opción
 
 /* Establecer un tamaño máximo para las imágenes del carrusel */
 .carousel-item img {
+    border-radius: 20px;
     margin:auto;
     max-width: 80%; /* Ancho máximo */
     max-height: auto; /* Altura máxima */
@@ -67,7 +80,98 @@ font-family: 'Crow', sans-serif; /* Usa la fuente 'Crow' como la primera opción
     height: auto;
 }
 
+.lugares{
+    width: 200px;
+}
+
+.btn-primary{
+    background-color: #1b1b1b;
+    border-color: brown;
+    transition: transform 0.5 ease;
+}
+
+.btn-secondary{
+    background-color: #282828;
+    border-color: brown;
+    transition: transform 0.5 ease;
+
+}
+
+.btn-info{
+    background-color: #474747;
+    border-color: brown;
+    transition: transform 0.5 ease;
+
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-info:hover {
+    background-color: rgb(105, 28, 28);
+    border-color: black;
+}
+
+
+.card-text{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    background-color: #474747;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave */
+}
+
+.card:hover{
+    transform: scale(1.1); /* Aumenta el tamaño al hacer hover */
+    box-shadow: 0 0 10px rgba(255,255,255,0.5); /* Agrega una sombra blanca */
+}
+
+.formulario {
+    background-color: #474747;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px; /* Increased padding for better spacing */
+}
+
+.formulario h2, label{
+    color: rgb(255, 255, 255);
+}
+
+
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    background-color: #333; /* Background color of input fields */
+    border: none;
+    border-radius: 5px;
+    color: white; /* Text color */
+    padding: 10px;
+    margin-bottom: 15px; /* Spacing between input fields */
+}
+
+.formulario textarea {
+    height: 100px; /* Adjust the height of the textarea */
+}
+
+
+.social-icons {
+    margin-top: 20px;
+  }
+  .social-icons .social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #510808; /* Change color on hover */
+  }
+  .social-icons .social-icon:hover {
+    color: #555; /* Change color on hover */
+  }
+
+
 footer{
+    margin-top: 20px;
     background-color:  var(--marronMenu);
 }
 
